@@ -1,7 +1,10 @@
 <p>list-tree works!</p>
- <ul>
-      <li *ngFor="let node of tree">
-        {{node.name}}
-        <app-list-tree [tree]="node.child" *ngIf="node.child.length"></app-list-tree>
-      </li>
-    </ul>
+<ul>
+  <li *ngFor="let node of tree">
+    {{ node.name }}
+    <app-list-tree
+      [tree]="node.child"
+      *ngIf="node.child.length"
+    ></app-list-tree>
+  </li>
+</ul>
